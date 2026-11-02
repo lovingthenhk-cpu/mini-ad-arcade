@@ -1,9 +1,11 @@
 import mountSort from './games/sort.js';
 import mountParking from './games/parking.js';
+import mountGates from './games/gates.js';
 
 const games=[
   {id:'sort',number:'01',title:'ウォーターソート',eng:'COLOR SORT',genre:'パズル',description:'色が揃うと、気持ちいい。試験管の色をきれいに分けよう。',difficulty:'かんたん〜',tint:'rose',symbol:'◉',mount:mountSort},
-  {id:'parking',number:'02',title:'パーキングジャム',eng:'PARKING JAM',genre:'ロジック',description:'その車、邪魔です！渋滞を動かして赤い車を脱出させよう。',difficulty:'ひらめき',tint:'sky',symbol:'➜',mount:mountParking}
+  {id:'parking',number:'02',title:'パーキングジャム',eng:'PARKING JAM',genre:'ロジック',description:'その車、邪魔です！渋滞を動かして赤い車を脱出させよう。',difficulty:'ひらめき',tint:'sky',symbol:'➜',mount:mountParking},
+  {id:'gates',number:'03',title:'ゲートラッシュ',eng:'GATE RUSH',genre:'計算・選択',description:'×3か、+20か。正しいゲートを選んで仲間を増やそう！',difficulty:'判断力',tint:'lime',symbol:'×3',mount:mountGates}
 ];
 const home=document.querySelector('#home'),view=document.querySelector('#game-view'),grid=document.querySelector('#games-grid');
 const escapeHtml=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
