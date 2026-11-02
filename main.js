@@ -1,7 +1,9 @@
 import mountSort from './games/sort.js';
+import mountParking from './games/parking.js';
 
 const games=[
-  {id:'sort',number:'01',title:'ウォーターソート',eng:'COLOR SORT',genre:'パズル',description:'色が揃うと、気持ちいい。試験管の色をきれいに分けよう。',difficulty:'かんたん〜',tint:'rose',symbol:'◉',mount:mountSort}
+  {id:'sort',number:'01',title:'ウォーターソート',eng:'COLOR SORT',genre:'パズル',description:'色が揃うと、気持ちいい。試験管の色をきれいに分けよう。',difficulty:'かんたん〜',tint:'rose',symbol:'◉',mount:mountSort},
+  {id:'parking',number:'02',title:'パーキングジャム',eng:'PARKING JAM',genre:'ロジック',description:'その車、邪魔です！渋滞を動かして赤い車を脱出させよう。',difficulty:'ひらめき',tint:'sky',symbol:'➜',mount:mountParking}
 ];
 const home=document.querySelector('#home'),view=document.querySelector('#game-view'),grid=document.querySelector('#games-grid');
 const escapeHtml=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
