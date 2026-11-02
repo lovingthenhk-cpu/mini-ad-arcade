@@ -1,6 +1,6 @@
 const C={pink:'#ff6f91',blue:'#64c7fc',gold:'#ffd36a',mint:'#6ee0b6',violet:'#b9a1ff',orange:'#ff9a66'};
 const N={pink:'ピンク',blue:'水色',gold:'黄色',mint:'ミント',violet:'紫',orange:'オレンジ'};
-const LEVELS=[
+export const LEVELS=[
  {name:'はじめての仕分け',tubes:[['pink','blue','pink','blue'],['blue','pink','blue','pink'],[],[]]},
  {name:'3色のジグザグ',tubes:[['pink','blue','gold','pink'],['blue','gold','pink','blue'],['gold','pink','blue','gold'],[],[]]},
  {name:'カラフルな迷路',tubes:[['pink','blue','gold','mint'],['mint','pink','blue','gold'],['gold','mint','pink','blue'],['blue','gold','mint','pink'],[],[]]},
