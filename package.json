@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check main.js && node --check games/sort.js"
+    "check": "node --check main.js && node --check games/fruits.js",
+    "test": "node tests/logic-smoke.mjs && node tests/parking-solver.mjs"
   }
 }

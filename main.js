@@ -26,7 +26,7 @@ function artFor(g){
   if(g.id==='merge')return '<div class="art-merge"><span>2</span><span>4</span><span>8</span><span>4</span><span>16</span><span>2</span></div>';
   if(g.id==='screws')return '<div class="art-screws">'+[0,1,2,0,1,2,2,0].map(x=>'<i style="--screw-color:'+['#ff789a','#67cfff','#ffd36d'][x]+'"></i>').join('')+'</div>';
   if(g.id==='line')return '<div class="art-line"><i>★</i><i>★</i><i>★</i></div>';
-  if(g.id==='fruits')return '<div class="art-fruits"><span>🍒</span><span>🍑</span><span>🍉</span></div>';
+  if(g.id==='fruits')return '<div class="art-fruits"><span></span><span></span><span></span></div>';
   if(g.id==='pins')return '<div class="art-pins"><span class="pin-dot one"></span><span class="pin-dot two"></span><span class="pin-dot three"></span><span class="pin-bar"></span><span class="pin-bucket">◡</span></div>';
   return '';
 }
