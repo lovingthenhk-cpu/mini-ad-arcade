@@ -5,6 +5,7 @@ import mountMerge from './games/merge.js';
 import mountScrews from './games/screws.js';
 import mountPins from './games/pins.js';
 import mountLine from './games/line.js';
+import mountFruits from './games/fruits.js';
 
 const games=[
   {id:'sort',number:'01',title:'ウォーターソート',eng:'COLOR SORT',genre:'パズル',description:'色が揃うと、気持ちいい。試験管の色をきれいに分けよう。',difficulty:'かんたん〜',tint:'rose',symbol:'◉',mount:mountSort},
@@ -13,7 +14,8 @@ const games=[
   {id:'merge',number:'04',title:'数字マージ 2048',eng:'NUMBER MERGE',genre:'数字パズル',description:'2、4、8、16……同じ数字を重ねて2048を作ろう。',difficulty:'中毒性',tint:'violet',symbol:'2048',mount:mountMerge},
   {id:'screws',number:'05',title:'ねじ外しパズル',eng:'SCREW MASTER',genre:'色合わせ',description:'3本同じ色を揃えてネジを片付けよう。トレイは5本まで。',difficulty:'順番がカギ',tint:'rose',symbol:'✳',mount:mountScrews},
   {id:'pins',number:'06',title:'ピン抜きレスキュー',eng:'PULL THE PIN',genre:'仕掛けパズル',description:'溶岩より先に水を落とせ！ピンを抜いて宝物を守ろう。',difficulty:'順番勝負',tint:'sky',symbol:'◆',mount:mountPins},
-  {id:'line',number:'07',title:'一筆スターロード',eng:'ONE LINE QUEST',genre:'一筆パズル',description:'ひと筆で星を全部集めろ！壁を避けてゴールまでつなごう。',difficulty:'脳トレ',tint:'lime',symbol:'★',mount:mountLine}
+  {id:'line',number:'07',title:'一筆スターロード',eng:'ONE LINE QUEST',genre:'一筆パズル',description:'ひと筆で星を全部集めろ！壁を避けてゴールまでつなごう。',difficulty:'脳トレ',tint:'lime',symbol:'★',mount:mountLine},
+  {id:'fruits',number:'08',title:'フルーツドロップ',eng:'FRUIT DROP',genre:'物理パズル',description:'ポトンと落として合体！大きなフルーツをどんどん作ろう。',difficulty:'クセになる',tint:'violet',symbol:'🍉',mount:mountFruits}
 ];
 const home=document.querySelector('#home'),view=document.querySelector('#game-view'),grid=document.querySelector('#games-grid');
 const escapeHtml=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,6 +26,7 @@ function artFor(g){
   if(g.id==='merge')return '<div class="art-merge"><span>2</span><span>4</span><span>8</span><span>4</span><span>16</span><span>2</span></div>';
   if(g.id==='screws')return '<div class="art-screws">'+[0,1,2,0,1,2,2,0].map(x=>'<i style="--screw-color:'+['#ff789a','#67cfff','#ffd36d'][x]+'"></i>').join('')+'</div>';
   if(g.id==='line')return '<div class="art-line"><i>★</i><i>★</i><i>★</i></div>';
+  if(g.id==='fruits')return '<div class="art-fruits"><span>🍒</span><span>🍑</span><span>🍉</span></div>';
   if(g.id==='pins')return '<div class="art-pins"><span class="pin-dot one"></span><span class="pin-dot two"></span><span class="pin-dot three"></span><span class="pin-bar"></span><span class="pin-bucket">◡</span></div>';
   return '';
 }
